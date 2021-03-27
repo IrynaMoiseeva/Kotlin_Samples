@@ -116,12 +116,10 @@ class TrackingFragment: Fragment(R.layout.fragment_tracking) {
         return super.onOptionsItemSelected(item)
     }
 
-
     private fun stopRun(){
         sendCommandToService(ACTION_STOP_SERVICE)
         findNavController().navigate(R.id.action_trackingFragment_to_runFragment)
     }
-
 
     private fun moveCameraToUser(){
         if (pathPoints.isNotEmpty() && pathPoints.last().isNotEmpty())
